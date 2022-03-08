@@ -35,7 +35,7 @@ actor {
     private func capitalize_character(c : Char) : Char {
         var asc2 : Nat32 = Char.toNat32(c);
         if (Nat32.greaterOrEqual(asc2, 97) and Nat32.lessOrEqual(asc2, 122)) {
-            return Char.fromNat32(Char.toNat32(c) - 32);
+            return Char.fromNat32(asc2 - 32);
         };
         return c;
     };
