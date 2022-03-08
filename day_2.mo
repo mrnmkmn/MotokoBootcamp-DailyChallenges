@@ -33,8 +33,11 @@ actor {
 
     // Challenge 4
     private func capitalize_character(c : Char) : Char {
-        if (Char.isWhitespace(c)) { return c; };
-        return Char.fromNat32(Char.toNat32(c) - 32);
+        var asc2 : Nat32 = Char.toNat32(c);
+        if (Nat32.greaterOrEqual(asc2, 97) and Nat32.lessOrEqual(asc2, 122)) {
+            return Char.fromNat32(Char.toNat32(c) - 32);
+        };
+        return c;
     };
     // public func test_capitalize_character(asc2 : Nat32) : async Char {
     //     return capitalize_character(Char.fromNat32(asc2));
