@@ -4,11 +4,10 @@ import Array "mo:base/Array";
 actor {
     // Challenge 1
     private func swap(array : [var Nat], j : Nat, i : Nat) : [var Nat] {
-        var swapped_array = array;
-        var tmp = swapped_array[j];
-        swapped_array[j] := swapped_array[i];
-        swapped_array[i] := tmp;
-        return swapped_array;
+        var tmp = array[j];
+        array[j] := array[i];
+        array[i] := tmp;
+        return array;
     };
 
     // Challenge 2
@@ -21,8 +20,7 @@ actor {
     // Challenge 3
     public func seven(array : [Nat]) : async Text {
         var containsSeven : Bool = (Array.find<Nat>(array, func (n : Nat) : Bool {
-            if (n == 7) { return true; };
-            return false;
+            n == 7
         }) != null);
         if (containsSeven) {
             return "Seven is found";
