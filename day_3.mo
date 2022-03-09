@@ -83,7 +83,7 @@ actor {
     // Challenge 10
     func contains<A>(array : [A], a : A, f : (A,A) -> Bool) : async Bool {
         switch ((Array.find<A>(array, func (n : A) {f(n, a)}))) {
-            case (?exists) true;
+            case (?contains) true;
             case (null) false;
         };
     };
