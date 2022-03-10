@@ -1,5 +1,3 @@
-import Array "mo:base/Array";
-
 module {
     // Challenge 7
     public type List<T> = ?(T, List<T>);
