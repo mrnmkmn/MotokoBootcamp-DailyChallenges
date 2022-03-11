@@ -48,6 +48,14 @@ actor {
     };
 
     // Challenge 7
+     var savings : Nat = 0;
+    //  public shared(msg) func withdraw_cycles(amount : Nat) : async () {
+    //     assert (msg.caller == msg.caller);
+    //     assert (amount <= savings);
+    //     Cycles.add(amount);
+    //     let refund = Cycles.refunded();
+    //     savings -= amount - refund;
+    // };
 
     // Challenge 8
     stable var versionNumber : Nat = 0;
